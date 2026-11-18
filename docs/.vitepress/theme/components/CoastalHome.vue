@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
-import PelicanRide from './PelicanRide.vue'
 import Timeline from './Timeline.vue'
 
 const areas = [
@@ -30,7 +29,6 @@ function openSearch() {
         <nav class="hero-shortcuts" aria-label="快速入口"><a v-for="area in areas" :key="area.link" :href="withBase(area.link)">{{ area.name }}</a></nav>
         <p class="hero-footnote">公开资料为起点 · 工程实践为方向 · 持续校验</p>
       </div>
-      <div class="hero-pelican"><PelicanRide /><a class="pelican-gallery-link" href="https://shuifans.github.io/pelican-lab/">同一道题，看看其他模型怎么画 <span class="vpi-arrow-right" aria-hidden="true"></span></a></div>
     </section>
 
     <section id="knowledge-areas" class="knowledge-section" aria-labelledby="knowledge-title">
@@ -64,16 +62,13 @@ function openSearch() {
 .coastal-home { max-width: 1120px; margin: 0 auto; padding: 0 32px; color: var(--coast-ink); }
 .coastal-home :where(a) { color: inherit; text-decoration: none; }
 .eyebrow { margin: 0 0 14px; font-size: 10px; line-height: 1.6; font-weight: 500; letter-spacing: .18em; color: var(--coast-muted); }
-.coastal-hero { display: grid; grid-template-columns: .88fr 1.12fr; gap: 46px; align-items: center; padding: 40px 0 42px; }
-.hero-copy { padding: 8px 0; }
-.hero-pelican { min-width: 0; }
-.pelican-gallery-link { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--coast-accent) !important; font-size: 12px; min-height: 44px; margin-top: 6px; }
-.pelican-gallery-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.coastal-hero { padding: 56px 0 48px; }
+.hero-copy { max-width: 760px; margin: 0 auto; padding: 8px 0; text-align: center; }
 .coastal-home h1 { font-size: clamp(40px, 4.5vw, 56px); font-weight: 600; letter-spacing: .025em; line-height: 1.3; margin: 22px 0 0; }
 h1 span { color: var(--coast-accent); }
 .hero-tagline { font-size: 21px; font-weight: 500; letter-spacing: .08em; margin: 22px 0 14px; }
 .hero-description { color: var(--coast-muted); font-size: 14px; line-height: 2; margin: 0; }
-.hero-actions { display: flex; align-items: center; gap: 20px; margin-top: 28px; }
+.hero-actions { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 28px; }
 .coast-button, .search-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border-radius: 99px; min-height: 44px; font-size: 13px; font-weight: 500; cursor: pointer; }
 .coast-button { padding: 11px 22px; background: var(--coast-button); color: #fffdf5; }
 .coast-button:hover { filter: brightness(1.08); }
@@ -124,7 +119,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #c49441; outline-offs
   .coastal-home h1 { font-size: 44px; margin-top: 12px; } h1 br { display: none; } h1 span { margin-left: .2em; }
   .hero-tagline { margin-top: 18px; font-size: 19px; }
   .hero-description { font-size: 14px; } .hero-actions { justify-content: center; margin-top: 22px; }
-  .hero-footnote { margin-top: 20px; } .coastal-hero :deep(.ride-card) { width: 100%; max-width: 600px; margin: 0 auto; }
+  .hero-footnote { margin-top: 20px; }
   .knowledge-grid { gap: 12px; } .knowledge-card { padding: 17px; } .area-description { min-height: 76px; }
   .coastal-chronicle { grid-template-columns: 1fr; gap: 32px; }
 }
@@ -144,7 +139,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #c49441; outline-offs
 @media (max-width: 360px) { .coastal-home { padding: 0 14px; } .coastal-home h1 { font-size: 30px; } .card-links { align-items: start; flex-direction: column; gap: 12px; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .knowledge-card:hover { transform: none; } }
 .knowledge-section { scroll-margin-top: 92px; }
-.hero-shortcuts { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+.hero-shortcuts { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
 .hero-shortcuts a { font-size: 12px; color: var(--coast-accent); text-decoration: underline; text-underline-offset: 4px; }
 .coastal-chronicle { margin-top: 48px; }
 @media(max-width:820px) { .hero-shortcuts { justify-content: center; } }

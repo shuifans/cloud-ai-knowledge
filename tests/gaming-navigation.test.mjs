@@ -41,7 +41,7 @@ test('gaming paging keeps readers in the same directory and preserves breadcrumb
       })
     })
   }
-  const trail = breadcrumbTrail(knowledgeSidebar, '/pelican-lab/gaming/production/asset-pipeline.html', '', '/pelican-lab/')
+  const trail = breadcrumbTrail(knowledgeSidebar, '/cloud-ai-knowledge/gaming/production/asset-pipeline.html', '', '/cloud-ai-knowledge/')
   assert.deepEqual(trail.map(item => item.link), ['/', '/gaming/', '/gaming/production/', '/gaming/production/asset-pipeline'])
   assert.equal(trail[1].text, '游戏行业')
   // Existing article URLs now resolve through their merged directory, not their physical folder.
@@ -51,7 +51,7 @@ test('gaming paging keeps readers in the same directory and preserves breadcrumb
     ['/gaming/analytics/metrics', '/gaming/publishing/'],
     ['/gaming/ai/scenarios-evaluation', '/gaming/systems/'],
   ]) {
-    const mergedTrail = breadcrumbTrail(knowledgeSidebar, `/pelican-lab${article}.html`, '', '/pelican-lab/')
+    const mergedTrail = breadcrumbTrail(knowledgeSidebar, `/cloud-ai-knowledge${article}.html`, '', '/cloud-ai-knowledge/')
     assert.deepEqual(mergedTrail.map(item => item.link), ['/', '/gaming/', parent, article])
   }
 })

@@ -52,7 +52,6 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '云与 AI 技术知识库' }],
@@ -119,7 +118,6 @@ export default defineConfig({
     nav: [
       { text: '知识体系', link: '/' },
       { text: '关于', link: '/about' },
-      { text: '鹈鹕测试', link: 'https://shuifans.github.io/pelican-lab/' },
     ],
 
     sidebar: knowledgeSidebar,

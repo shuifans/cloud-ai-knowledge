@@ -8,7 +8,7 @@ const tree = directoryTree(knowledgeSidebar)
 const source = '/software/foundations/source-to-runtime'
 
 test('deep links identify every directory ancestor, including groups without a URL', () => {
-  assert.equal(directoryPath(`/pelican-lab${source}.html#原理`, '/pelican-lab/'), source)
+  assert.equal(directoryPath(`/cloud-ai-knowledge${source}.html#原理`, '/cloud-ai-knowledge/'), source)
   assert.deepEqual(directoryAncestors(tree, source), ['/software/', '/software/foundations/'])
   assert.deepEqual(directoryAncestors(tree, '/ai/models/llm'), ['/ai/', '/ai/models/', '人工智能 / 模型与算法 / 基础模型'])
   assert.deepEqual(directoryAncestors(tree, '/software/foundations/'), ['/software/', '/software/foundations/'])

@@ -2,7 +2,7 @@ import { softwareSidebar } from './software-sidebar.mjs'
 import { gamingSidebar } from './gaming-sidebar.mjs'
 import { knowledgeRoot } from './theme/knowledge.mjs'
 
-// Shared knowledge tree for articles and the / home; Pelican Lab is a separate benchmark site.
+// Shared knowledge tree for articles and the / home.
 export const knowledgeSidebar = [ { ...knowledgeRoot },
   { text: '云计算',
     link: '/cloud/',

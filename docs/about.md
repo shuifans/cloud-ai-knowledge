@@ -8,12 +8,11 @@ reviewScope: AI 数据、持续交付、企业治理及游戏行业的内容结�
 
 # 关于本站
 
-本知识库持续更新云计算、人工智能、软件研发、游戏行业与技术编年史内容，目标是把分散的公开资料、技术原理、工程方法与业务知识整理成一套**有结构、可检索、可核验、可持续演进**的知识体系。鹈鹕测试已迁至独立的 [Pelican Lab](https://shuifans.github.io/pelican-lab/) benchmark 站点。
+本知识库持续更新云计算、人工智能、软件研发、游戏行业与技术编年史内容，目标是把分散的公开资料、技术原理、工程方法与业务知识整理成一套**有结构、可检索、可核验、可持续演进**的知识体系。
 
 ## 站点结构
 
 - [知识体系](/)：云计算、人工智能、软件研发、游戏行业与技术编年史入口
-- [鹈鹕测试](https://shuifans.github.io/pelican-lab/)：按模型与 reasoning effort 筛选、播放和放大查看鹈鹕骑车动画作品
 - 知识文章地址保持不变；旧 `/knowledge/` 会跳转到首页
 
 ## 内容声明
@@ -62,62 +61,6 @@ reviewScope: AI 数据、持续交付、企业治理及游戏行业的内容结�
 
 > 这里说明哪些知识被修正、依据是什么，以及哪些内容仍保留历史资料口径。复核日期只覆盖列出的范围；网页能访问、文章结构完整或刚刚发布，都不等于其中每一个事实已重新验证。
 
-### 2026-11-04：鹈鹕测试新增 HY4 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=hy4&effort=high) 新增 `hy4 / high`，现有 40 个作品、33 个模型。原始 HTML 按字节保留并可下载；作品为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-11-02：鹈鹕测试新增 Claude Haiku 5.5、Opus 5.5 与 Sonnet 5.5 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=claude-haiku5.5,claude-opus5.5,claude-sonnet5.5&effort=default) 新增 `claude-haiku5.5 / default`、`claude-opus5.5 / default` 与 `claude-sonnet5.5 / default`，现有 39 个作品、32 个模型。原始 HTML 按字节保留并可下载；三份作品均为内联 SVG，隔离预览不依赖外网。`default` 按测试记录收录，不表示推理强度。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-27：鹈鹕测试新增 GPT-6.1 Terra 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=gpt6.1-terra&effort=max) 新增 `gpt6.1-terra / max`，现有 36 个作品、29 个模型。原始 HTML 按字节保留并可下载；作品为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-26：鹈鹕测试区分 DeepSeek 历史版本
-
-首批收录的 `deepseek-v4.1-flash / max` 显示名与筛选标识更新为 [`deepseek-v4.1-flash-0731`](https://shuifans.github.io/pelican-lab/?model=deepseek-v4.1-flash-0731&effort=max)，与 2026-10-17 收录的 `deepseek-v4.1-flash-1017` 区分。`0731` 与 `1017` 一样是模型版本标识，不表示测试时间；作品内容、收录日期、原始字节与封面均未改动。
-
-### 2026-10-24：鹈鹕测试新增 Qaudex Cantus 与 Sonus 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=qaudex-cantus-1019,qaudex-sonus-1019&effort=xhigh) 新增 `qaudex-cantus-1019 / xhigh` 与 `qaudex-sonus-1019 / xhigh`，现有 35 个作品、28 个模型。原始 HTML 按字节保留并可下载；两份作品均为内联 SVG，隔离预览不依赖外网。`1019` 是模型版本标识，不表示测试时间。测试时间未知，收录日期不作为测试时间。
-
-### 2026-11-08：鹈鹕测试新增 QoDuck 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=qoduck&effort=xhigh) 新增 `qoduck / xhigh`，现有 42 个作品、35 个模型。原始 HTML 按字节保留并可下载；作品为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-11-05：鹈鹕测试新增 QwenWork Pro、Ultra、Standard 与 DeepSeek V4.1 Flash 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=qwenwork-deepseek-v4.1-flash,qwenwork-pro-20261105,qwenwork-standard-20261105,qwenwork-ultra-20261105&effort=default) 新增 `qwenwork-pro-20261105 / default`、`qwenwork-ultra-20261105 / default`、`qwenwork-standard-20261105 / default` 与 `qwenwork-deepseek-v4.1-flash / default`，现有 41 个作品、34 个模型。原始 HTML 按字节保留并可下载；四份作品均为内联 SVG，隔离预览不依赖外网。`default` 按测试记录收录，不表示推理强度。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-24：鹈鹕测试新增 Kimi 与 DeepSeek 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=deepseek-v4-pro-0813,kimi-k2.8-preview,kimi-k3.1-pro&effort=max) 新增 `deepseek-v4-pro-0813 / max`、`kimi-k2.8-preview / max` 与 `kimi-k3.1-pro / max`，现有 30 个作品、23 个模型。原始 HTML 按字节保留并可下载；三份作品均为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-23：鹈鹕测试成为首页，知识体系迁至 /knowledge/
-
-站点首页改为[鹈鹕测试](https://shuifans.github.io/pelican-lab/)展区，顶部右上角保留单个[知识体系](/knowledge/)入口；知识首页迁至 `/knowledge/`，知识侧栏、面包屑和搜索摘要同步调整。云、AI、软件研发、游戏行业与技术编年史的文章地址保持不变；旧 `/playground/pelican/` 跳转到首页并保留筛选参数。本次只调整站点信息架构，不更新技术内容的复核日期。
-
-### 2026-10-20：鹈鹕测试新增 MiMo、Step 与 MiniMax 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=mimo-v2.6-pro,minimax-m3.1-flash,step5-preview&effort=default,high) 新增 `mimo-v2.6-pro / default`、`step5-preview / high` 与 `minimax-m3.1-flash / default`，现有 27 个作品、20 个模型。原始 HTML 按字节保留并可下载；三份作品均为内联 SVG，隔离预览不依赖外网。`default` 按测试记录收录，不表示推理强度。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-19：鹈鹕测试新增 Qaudex 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=qaudex-efficient-1019,qaudex-fast-1019,qaudex-ultimate-1019&effort=default,xhigh) 新增 `qaudex-fast-1019 / default`、`qaudex-efficient-1019 / default` 与 `qaudex-ultimate-1019 / xhigh`，现有 24 个作品、17 个模型。原始 HTML 按字节保留并可下载；三份作品均为内联 SVG，隔离预览不依赖外网。`default` 按测试记录收录，不表示推理强度。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-17：鹈鹕测试新增 DeepSeek 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=deepseek-v4.1-flash-1017&effort=max) 新增 `deepseek-v4.1-flash-1017 / max`，现有 21 个作品、14 个模型。原始 HTML 按字节保留并可下载；作品为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-10：鹈鹕测试新增 Grok 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=grok4.6,grok4.7&effort=xhigh) 新增 `grok4.6 / xhigh` 与 `grok4.7 / xhigh`，现有 20 个作品、13 个模型。原始 HTML 按字节保留并可下载；两份作品均为内联 SVG，隔离预览不依赖外网。测试时间未知，收录日期不作为测试时间。
-
-### 2026-10-07：鹈鹕测试新增 Gemini 作品
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/?model=gemini3.8-flash&effort=high) 新增 `gemini3.8-flash / high`，现有 18 个作品、11 个模型。原始 HTML 按字节保留并可下载；隔离预览使用从原依赖生成的静态 Tailwind 样式，支持离线动画、暂停、踏频与氛围切换。测试时间未知，收录日期不作为测试时间。
-
 ### 2026-10-04：收敛软件研发目录
 
 [软件研发](/software/)由 19 个并列目录收敛为 9 个：软件项目入门（16 篇）、编程与计算机基础（17 篇）、需求与架构（13 篇）、前端与专项开发（15 篇）、后端与数据（13 篇）、工具与 AI 协作（18 篇）、测试与安全（13 篇）、交付与维护（16 篇）、术语与查询索引（3 篇）。合并后的目录直接列出文章，不增加下一级分类；全部 124 篇内容和文章地址保留，10 个旧目录入口跳转至新归属。侧栏、目录页、面包屑、搜索摘要和目录内翻页同步使用新结构。本次调整内容组织，不更新文章的技术复核日期。
@@ -152,7 +95,7 @@ reviewScope: AI 数据、持续交付、企业治理及游戏行业的内容结�
 
 ### 2026-10-03：统一全站左侧目录
 
-首页、文章与鹈鹕测试统一使用左侧知识目录，包含云计算、人工智能、软件研发、技术编年史及站点页面。取消顶部模块入口与下拉菜单，跨领域跳转在同一棵目录树中完成；面包屑由目录层级生成，手机通过“知识目录”展开同一份内容。
+首页与文章统一使用左侧知识目录，包含云计算、人工智能、软件研发、技术编年史及站点页面。取消顶部模块入口与下拉菜单，跨领域跳转在同一棵目录树中完成；面包屑由目录层级生成，手机通过“知识目录”展开同一份内容。
 
 ### 2026-10-03：软件研发目录与阅读体验整改
 
@@ -164,19 +107,7 @@ reviewScope: AI 数据、持续交付、企业治理及游戏行业的内容结�
 
 内容按五阶段建设，新增文章引用对应规范、官方文档和项目资料。分类与边界参考 SWEBOK、MDN Curriculum 等公开来源；它们分别用于校验软件工程覆盖及前端框架，并不代表单个来源覆盖全部研发知识。各技术文章保留自身实际引用与复核范围。案例和代码示意与实际执行结果分开说明，正文完成不代表真实应用通过验证，也不代表站点已经部署。本轮不改变既有云与 AI 文章的技术复核日期。
 
-### 2026-10-03：鹈鹕测试对比排序
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/) 默认按完整模型名称排列，同一模型内按 reasoning effort 从 low → medium → high → xhigh → max 升序。调整模型或 effort 筛选时自动回到这一顺序，方便跨批次对比；仍可手动切换为最近收录。
-
-### 2026-09-30：鹈鹕测试补充
-
-[鹈鹕测试](https://shuifans.github.io/pelican-lab/) 新增第二批 4 个作品：`gpt6.1-sol` 的 medium、high、xhigh，以及 `gpt6-astra` 的 high。展区现有 17 个作品、10 个模型，新增结果可通过模型与 reasoning effort 筛选，或按最新收录排序浏览。原始提示词、HTML 输出与真实预览封面一并保留。
-
 ### 2026-09-26：准确性与新鲜度更新
-
-站点导航已将鹈鹕测试置于编年史之前，核验与更新记录统一收录于关于页。
-
-本日新增 [鹈鹕测试](https://shuifans.github.io/pelican-lab/) 趣味展区：首批收录 13 个作品，支持按模型与 reasoning effort 筛选；总览动画默认播放，详情默认展示完整画面，可按需切换适应窗口。原始提示词与输出保留；这项展示不构成模型综合能力排名，也不更新其他文章的事实复核日期。
 
 本轮对原有 **56 页**进行目录、日期、引用与高风险表述筛查，再对价格、模型路由、容量计算、数据一致性及执行安全等重点内容做官方来源核对或算术复算。**这不是对全部历史细节、外链和性能数字的逐条认证**。逐页处理范围见下表；没有专项记录的页面不刷新历史复核日期。
 

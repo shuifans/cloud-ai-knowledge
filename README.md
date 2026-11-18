@@ -4,8 +4,6 @@
 
 > 站点地址：<https://shuifans.github.io/cloud-ai-knowledge/>
 
-鹈鹕模型测试已独立为 [Pelican Lab](https://shuifans.github.io/pelican-lab/) benchmark 站点；本仓库只维护知识内容。
-
 ## 内容结构
 
 知识体系采用“领域 → 子域 → 专题”三级目录，技术领域、游戏行业与技术编年史并列：
