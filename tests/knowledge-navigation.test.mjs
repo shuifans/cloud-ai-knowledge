@@ -113,7 +113,7 @@ test('one global sidebar contains every knowledge area and no duplicate destinat
   assert.deepEqual(nav, [
     { text: '知识体系', link: '/' },
     { text: '关于', link: '/about' },
-    { text: '鹈鹕测试', link: 'https://shuifans.github.io/pelican-lab/benchmarks/pelican-2d/' },
+    { text: '鹈鹕测试', link: 'https://shuifans.github.io/pelican-lab/' },
   ])
   assert.deepEqual(sidebar.filter(item=>item.items).map(item=>item.link), ['/cloud/','/ai/','/software/','/gaming/','/chronicle/'])
   const links = []

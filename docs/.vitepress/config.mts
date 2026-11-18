@@ -119,7 +119,7 @@ export default defineConfig({
     nav: [
       { text: '知识体系', link: '/' },
       { text: '关于', link: '/about' },
-      { text: '鹈鹕测试', link: 'https://shuifans.github.io/pelican-lab/benchmarks/pelican-2d/' },
+      { text: '鹈鹕测试', link: 'https://shuifans.github.io/pelican-lab/' },
     ],
 
     sidebar: knowledgeSidebar,
