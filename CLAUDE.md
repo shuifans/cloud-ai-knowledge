@@ -1,0 +1,95 @@
+# CLAUDE.md — 本仓库的 AI 协作写作规范
+
+本文件是写给 AI 协作助手（Claude 等）的写作与维护规范。人类作者同样适用。
+
+## 站点概况
+
+- 站点品牌：**云与 AI 技术知识库**，首页 `/` 为知识体系入口
+- 顶部导航提供「知识体系」「关于」「鹈鹕测试」三个入口；鹈鹕测试指向独立的 Pelican Lab benchmark 站点
+- 技术栈：VitePress 1.x + Mermaid（自定义组件），纯中文
+- 分类体系：云、AI、软件研发、游戏行业 + 技术编年史
+  - **云计算** `docs/cloud/`：foundation（基座）/ infra（计算·存储·网络）/ data（数据库·OLAP·大数据）/ native（云原生）/ architecture（卓越架构·安全·可靠性·FinOps·迁移）
+  - **人工智能** `docs/ai/`：models（模型与算法）/ data（数据生命周期·质量·知识治理）/ infra（集群/训练/推理）/ application（应用与评测）/ agent（智能体全景·编年史·框架对比）/ operations（持续交付·联合版本·监控反馈·企业治理·风险与供应商）
+  - **编年史** `docs/chronicle/`：技术浪潮与信创演进
+  - **软件研发** `docs/software/`：guide / foundations / architecture / frontend / backend / toolchain / quality / delivery / reference 共 9 个目录；完整专题和批次见 `maintenance/software-roadmap.json`
+  - **游戏行业** `docs/gaming/`：industry / production / publishing / systems 四个业务目录，配套 reference；清单见 `maintenance/gaming-roadmap.json`
+- 内容分级：完整文章（无标记）· 提纲页（纯文字“本文是提纲页”提示块 + 有意义的范围与要点）；仅规划的专题不创建空页
+
+## 常用命令
+
+```bash
+npm run docs:dev      # 本地预览（热更新）
+npm run docs:build    # 构建（含死链检查，发布前必跑）
+npm run docs:preview  # 预览构建产物
+```
+
+## 新增文章流程
+
+1. 从 `templates/article-template.md` 或概念、专题、实践、比较模板复制，放入对应知识域目录，英文短横线文件名
+2. 在 `docs/.vitepress/site-navigation.mjs` 的全站目录树中注册条目；软件研发维护 `docs/.vitepress/software-sidebar.mjs`，游戏行业维护 `docs/.vitepress/gaming-sidebar.mjs`（提纲页标注“（提纲）”）
+3. 目录页只组织文章入口，不写导读、学习路径或推荐阅读顺序
+4. 在 `docs/.vitepress/reading-guides.mjs` 补充搜索摘要；游戏行业摘要维护在 `gaming-reading-guides.mjs` 并汇入；正文不注入阅读指南
+5. 跑 `node --test tests/*.test.mjs` 和 `npm run docs:build` 确认行为与链接
+
+## 文章结构标准
+
+> 是什么 → 为什么 → 架构/原理（配 Mermaid 图）→ 实践与选型要点 → 常见坑 → 参考资料
+
+- 开篇必须有引语块（`>`），说明目标读者与读完的收获
+- 每篇完整文章至少 1 张 Mermaid 图，图上要有决策含义
+- 决策类内容优先用表格；经验值要写明适用边界
+- 文末“站内相关”互链，维护知识网络
+- 文末“参考资料”节的内容必须包在 `<Refs>` 组件里：
+
+```markdown
+## 参考资料
+
+<Refs>
+
+- [来源标题](https://)（访问日期 YYYY-MM-DD）
+- 站内相关：[相关文章](/domain/page)
+
+</Refs>
+```
+
+## 配图规范
+
+- 优先使用自制图、明确许可的开放素材或获得授权的官方图；转载图必须标注来源与许可，并下载到 `docs/public/images/<域>/<文章>/`，禁止热链引用
+- 优先官方文档/博客的架构图、Wikimedia Commons；下载后校验为图片格式，超过 1.5MB 压缩（`sips -Z 1200`）
+- 每张图正文下方用斜体图注标注来源页链接；参考资料的“图片来源”小节也要登记
+- Mermaid 治理：渲染配置在 `theme/components/MermaidDiagram.vue`（按需动态 import）；图容器为纸面卡片，浅色/暗色模式分别使用对应纸面；SVG 必须在卡片内等比例缩放到正文宽度，点击放大查看细节
+
+## 写作风格
+
+- 使用中立、可审计的工程写法，讲清“怎么用、适用边界与常见坑”，不写作者履历或个人项目经历
+- 观点必须标明证据类型与适用边界；无法由公开来源核验的经验数字，改写为待验证假设或删除
+- 术语首次出现给一句话解释；产品名用通用名 + 括号标注典型产品（如“托管 K8s（ACK 类）”）
+- **全文不使用表情包/emoji**（表格内星级评分 ★ 除外）；状态标记用纯文字（已发布/撰写中/提纲）
+
+## 合规红线（发布前强制自检）
+
+1. **不出现任何客户名称**、可识别的客户项目信息
+2. **不出现内部系统名、内部工具、内部代号**
+3. **不使用未公开数据**（内部报价、容量、性能数据等），只用公开资料或量级化表述
+4. 案例一律以“某行业客户”“典型场景”泛化
+5. 涉及阿里云产品处，以官方公开文档为准，不引申未公开能力
+6. **不出现作者履历、任职生态、亲历项目数量或“我参与/我经手/我见过”等个人背书**
+
+## 提纲页扩充约定
+
+提纲页正文以 `::: warning 本文是提纲页 ... :::` 开头，明确范围、核心问题、前置知识与待展开要点。扩充为完整文章时：移除该提示块、补全正文、更新目录中的状态；软件研发同步更新建设清单。
+
+## 发布流程
+
+- 推送到 GitHub 仓库 `cloud-ai-knowledge` 的 `main` 分支，GitHub Actions 自动构建并部署到 Pages
+- 提交信息用中文，格式：`新增/更新/修复: <文章或模块>`
+- 本机打包 Git bundle，上传 hkserver 后推送 main，再确认 GitHub Pages 工作流与线上页面；本机不直接 push
+
+## 导航与阅读体验维护
+
+- `site-navigation.mjs`（软件研发引用 `software-sidebar.mjs`，游戏行业引用 `gaming-sidebar.mjs`）是知识目录名称、顺序与层级的唯一来源；首页 `/` 是知识体系入口，顶部导航为「知识体系」「关于」「鹈鹕测试」，不设置模块下拉菜单；知识侧栏和面包屑根为「知识体系 → `/`」。`KnowledgeTree.vue` 将有子条目的节点渲染为纯展开按钮，只有叶子条目是页面链接。
+- `ReadingControls.vue` 提供目录开关：桌面左侧知识目录可向左收起并在本次浏览会话保留偏好，手机使用抽屉；右侧本页目录每次切换文章默认关闭。
+- 分类整行展开或收起，不更换正文或关闭手机抽屉；选择文章才切页。目录在当前浏览会话内记住展开状态和滚动位置。
+- 本站使用“版块 → 目录 → 文章”，不添加导读卡或推荐阅读顺序。`directory-markdown.mjs` 将目录标记展开为普通 Markdown 链接。
+- `lastVerified` 仅在技术内容实际复核后更新。主题的“内容复核于”与 Git 的“页面修订于”含义不同，改布局不能刷新复核日期。
+- 搜索按文章聚合章节并优先匹配文章标题；升级 VitePress 时需复测搜索、文章大纲、全站目录和手机抽屉覆盖。

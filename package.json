@@ -1,0 +1,16 @@
+{
+  "name": "cloud-ai-knowledge",
+  "version": "1.0.0",
+  "description": "云计算、人工智能、软件研发、游戏行业与技术编年史的中文知识体系",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "mermaid": "^11.17.2",
+    "vitepress": "^1.6.4"
+  }
+}
